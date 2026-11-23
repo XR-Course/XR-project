@@ -1,0 +1,6 @@
+{
+    "name": "Office.Environment.Tests",
+    "references": ["Office.Environment"],
+    "includePlatforms": ["Editor"],
+    "optionalUnityReferences": ["TestAssemblies"]
+}
