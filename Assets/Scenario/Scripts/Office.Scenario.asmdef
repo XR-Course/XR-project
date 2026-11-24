@@ -1,0 +1,17 @@
+{
+    "name": "Office.Scenario",
+    "rootNamespace": "OfficeTraining.Scenario",
+    "references": [
+        "Office.Scenario.Core",
+        "Office.Environment"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
