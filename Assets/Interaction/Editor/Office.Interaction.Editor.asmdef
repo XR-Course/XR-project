@@ -1,0 +1,24 @@
+{
+    "name": "Office.Interaction.Editor",
+    "rootNamespace": "OfficeTraining.Interaction.Editor",
+    "references": [
+        "Office.Interaction",
+        "Office.Interaction.Integration",
+        "Office.Scenario",
+        "Office.Scenario.Core",
+        "Office.Environment",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

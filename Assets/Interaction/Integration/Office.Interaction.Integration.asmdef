@@ -1,0 +1,21 @@
+{
+    "name": "Office.Interaction.Integration",
+    "rootNamespace": "OfficeTraining.Interaction.Integration",
+    "references": [
+        "Office.Interaction",
+        "Office.Interaction.Core",
+        "Office.Scenario",
+        "Office.Scenario.Core",
+        "Office.Environment",
+        "Unity.XR.Interaction.Toolkit"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
