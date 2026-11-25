@@ -1,0 +1,26 @@
+{
+    "name": "Office.Scenario.Tests",
+    "rootNamespace": "OfficeTraining.Scenario.Tests",
+    "references": [
+        "Office.Scenario.Core",
+        "Office.Scenario",
+        "Office.Environment",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
