@@ -1,0 +1,14 @@
+{
+    "name": "Office.Interaction.Core",
+    "rootNamespace": "OfficeTraining.Interaction",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}
