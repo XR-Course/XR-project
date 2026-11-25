@@ -192,7 +192,7 @@ namespace OfficeTraining.Interaction.Editor
             SetRef(bridge, "coordinator", coordinator);
             SetRef(bridge, "events", events);
             var serializedBridge = new SerializedObject(bridge);
-            serializedBridge.FindProperty("startTrainingOnPlay").boolValue = true;
+            serializedBridge.FindProperty("startTrainingOnPlay").boolValue = false;
             serializedBridge.ApplyModifiedPropertiesWithoutUndo();
 
             EditorSceneManager.MarkSceneDirty(scene);

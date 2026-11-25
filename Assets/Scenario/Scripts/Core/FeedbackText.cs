@@ -24,7 +24,7 @@ namespace OfficeTraining.Scenario
             "Choose to evacuate, or practice with the extinguisher only when the scenario permits it, and do not use it outside that practice.";
         public const string DecisionEvacuated = "You chose to evacuate.";
         public const string DecisionEvacuatedImplicit = "You went straight to the assembly point, which counts as evacuating.";
-        public const string DecisionPracticePermitted = "You practiced only in the permitted, supervised condition.";
+        public const string DecisionPracticePermitted = "You used the configured practice branch of the simulation.";
         public const string DecisionNotPermitted =
             "Practice was not permitted in this scenario. In that situation the expected choice was to evacuate.";
         public const string DecisionUnsafeUse = "The extinguisher was used outside the permitted practice ({0} time(s)).";

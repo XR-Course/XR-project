@@ -14,7 +14,7 @@ state or score. `ScenarioInteractionBridge` forwards the events to Student 3's
 | Scene | Purpose |
 | --- | --- |
 | `Assets/Interaction/Scenes/InteractionTestScene.unity` | Stand-alone module demo with no scenario or office. Pick up the extinguisher, hold the trigger, aim at the orange target; the event board shows every event and the practice progress. Select **RESET** to put everything back, or **INSPECT** to test ray selection. Walk or teleport onto the green square to test the zone trigger. |
-| `Assets/Scenes/OfficeTraining.unity` | Integrated training: a copy of Student 2's `OfficeBlockout` plus the XR rig, the props, Student 3's `ScenarioCoordinator` and the bridge. Training starts automatically on Play (temporary, until Student 4's start menu exists). |
+| `Assets/Scenes/OfficeTraining.unity` | Integrated training: the office, XR rig, props, scenario coordinator, bridge and runtime guidance. Start the session from the VR board. See `Integration/README.md`. |
 
 `OfficeBlockout.unity` is **not modified**: the environment's saved-scene test
 expects that scene to have no coordinator. After the environment scene changes,
@@ -95,6 +95,5 @@ and `ResetTraining()` restores the extinguisher pose and practice state.
   the hand, teleport comfort and frame rate (proposal section 9).
 - The extinguisher placement (stand next to the office doorway), aim time and
   target size are first guesses for usability testing.
-- `startTrainingOnPlay` on the bridge is a stand-in for Student 4's start menu;
-  turn it off when the menu calls `StartTraining()`.
+- The guidance board and its controls still need usability testing on the headset.
 - Practice permission and all safety wording remain Student 3's / safety review.
