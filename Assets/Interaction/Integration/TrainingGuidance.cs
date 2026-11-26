@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using OfficeTraining.Environment;
 using OfficeTraining.Scenario;
+using OfficeTraining.Interaction.Onboarding;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace OfficeTraining.Interaction.Integration
+
 {
     /// <summary>
     /// Minimal world-space PoC guidance. It presents coordinator state without owning training rules.
@@ -18,6 +20,7 @@ namespace OfficeTraining.Interaction.Integration
     public sealed class TrainingGuidance : MonoBehaviour
     {
         private ScenarioCoordinator coordinator;
+        private TutorialController tutorialController;
         private Transform board;
         private TextMeshPro heading;
         private TextMeshPro body;
@@ -55,6 +58,12 @@ namespace OfficeTraining.Interaction.Integration
             }
 
             CreateBoard();
+            tutorialController = FindAnyObjectByType<TutorialController>();
+            if (tutorialController != null)
+            {
+                SetBoardVisible(false);
+                tutorialController.OnTutorialComplete += ShowSimulationBoard;
+            }
             coordinator.OnPhaseChanged += OnPhaseChanged;
             coordinator.OnEventRecorded += OnEventRecorded;
             coordinator.OnPauseChanged += OnPauseChanged;
@@ -99,6 +108,25 @@ namespace OfficeTraining.Interaction.Integration
         }
         private void OnPauseChanged(bool paused) { PlaceBoard(); Refresh(); }
         private void OnSessionReset() { PlaceBoard(); Refresh(); }
+
+        public void SetBoardVisible(bool visible)
+        {
+            if (board == null)
+                return;
+            
+            board.gameObject.SetActive(visible);
+
+            if (visible)
+            {
+                PlaceBoard();
+                Refresh();
+            }
+        }
+
+        public void ShowSimulationBoard()
+        {
+            SetBoardVisible(true);
+        }
 
         private void PlaceBoard()
         {

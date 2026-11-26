@@ -44,5 +44,37 @@ namespace OfficeTraining.Interaction.Tests
                 TutorialStep.Welcome,
                 manager.CurrentStep);
         }
+
+        [Test]
+        public void CompleteAllSteps_TutorialIsAllCompleted()
+        {
+            manager.CompleteStep(TutorialStep.Welcome);
+            manager.CompleteStep(TutorialStep.Select);
+            manager.CompleteStep(TutorialStep.Grab);
+            manager.CompleteStep(TutorialStep.Teleport);
+            
+            Assert.IsTrue(manager.IsCompleted);
+            Assert.AreEqual(TutorialStep.Completed, manager.CurrentStep);
+        }
+
+        [Test]
+        public void Reset_ReturnsToWelcome()
+        {
+            manager.CompleteStep(TutorialStep.Welcome);
+            
+            manager.Reset();
+            
+            Assert.AreEqual(TutorialStep.Welcome, manager.CurrentStep);
+            Assert.IsFalse(manager.IsCompleted);
+        }
+
+        [Test]
+        public void CompleteStep_TriggerOnStepChanged()
+        {
+            TutorialStep receivedStep = TutorialStep.Welcome;
+            manager.OnStepChanged += step => receivedStep = step;
+            manager.CompleteStep(TutorialStep.Welcome);
+            Assert.AreEqual(TutorialStep.Select, receivedStep);
+        }
     }
 }
