@@ -32,3 +32,5 @@ This is a prototype and should not be presented as certified safety training.
 - [Low-Poly Office Set #1](https://assetstore.unity.com/packages/3d/props/low-poly-office-set-1-140-models-vnb-327126)
 
 # Blog posts
+
+* [Dev blog #1](https://github.com/XR-Course/blogposts/blob/main/XR-project/xr-devblog-01.md)
